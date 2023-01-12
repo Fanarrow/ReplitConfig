@@ -14,7 +14,7 @@ do
             echo 'Configurando seu servidor.'
 rm -rf ReplitBot && git clone https://github.com/Fanarrow/ReplitBot.git && mv ReplitBot/* . && mv ReplitBot/.replit . && rm -rf ReplitBot
             # Finaliza o menu
-            break
+            echo
             ;;
         'Instalar Aleatory Bot') # Opção 2
             # Executando os comandos...
