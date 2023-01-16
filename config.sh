@@ -5,7 +5,7 @@ clear
 echo 'Selecione o que deseja executar.'
 
 # Lê as palavras expandidas, criando as opções do menu enumeradas.
-select OPCAO in 'Configurar Servidor' 'Instalar Aleatory Bot' 'Instalar Sakura Bot' 'Sair'
+select OPCAO in 'Configurar Servidor' 'Instalar Aleatory Bot' 'Instalar Sakura Bot' 'Sair' 'Iniciar Aleatory Bot' 'Iniciar Sakura Bot'
 do
     # Lê o número armazenado na variável 'OPCAO' e executa a opção correspondente.
     case $OPCAO in
@@ -14,7 +14,8 @@ do
             echo 'Configurando seu servidor.'
 rm -rf ReplitBot && git clone https://github.com/Fanarrow/ReplitBot.git && mv ReplitBot/* . && mv ReplitBot/.replit . && rm -rf ReplitBot
             # Finaliza o menu
-            echo
+            echo 'Aperte no EXIT logo acima e volte para a instalação do Bot'
+            break
             ;;
         'Instalar Aleatory Bot') # Opção 2
             # Executando os comandos...
@@ -29,6 +30,32 @@ sh aleatory.sh
             echo 'Instalando Sakura Bot.'
 sh sakura.sh
             # Finaliza o menu
+            break
+            ;;
+
+        'Iniciar Aleatory Bot')  # Opcao 3
+
+            # Executando os comandos...
+
+            echo 'Iniciando Aleatory Bot.'
+
+cd aleatory-md && npm start
+
+            # Finaliza o menu
+
+            break
+            ;;
+
+        'Iniciar Sakura Bot')  # Opcao 3
+
+            # Executando os comandos...
+
+            echo 'Iniciando Sakura Bot.'
+
+cd sakura-botv6 && npm start
+
+            # Finaliza o menu
+
             break
             ;;
         'Sair')  # Finalizar script
