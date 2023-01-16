@@ -5,7 +5,7 @@ clear
 echo 'Selecione o que deseja executar.'
 
 # Lê as palavras expandidas, criando as opções do menu enumeradas.
-select OPCAO in 'Configurar Servidor' 'Instalar Aleatory Bot' 'Instalar Sakura Bot' 'Sair' 'Iniciar Aleatory Bot' 'Iniciar Sakura Bot'
+select OPCAO in 'Configurar Servidor' 'Instalar Aleatory Bot' 'Instalar Sakura Bot' 'Iniciar Aleatory Bot' 'Iniciar Sakura Bot' 'SAIR'
 do
     # Lê o número armazenado na variável 'OPCAO' e executa a opção correspondente.
     case $OPCAO in
@@ -58,7 +58,7 @@ cd sakura-botv6 && npm start
 
             break
             ;;
-        'Sair')  # Finalizar script
+        'SAIR')  # Finalizar script
             echo 'Saindo...'
             exit 0
             ;;
