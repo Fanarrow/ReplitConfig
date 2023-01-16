@@ -33,7 +33,7 @@ sh sakura.sh
             break
             ;;
 
-        'Iniciar Aleatory Bot')  # Opcao 3
+        'Iniciar Aleatory Bot')  # Opcao 4
 
             # Executando os comandos...
 
@@ -46,7 +46,7 @@ cd aleatory-md && npm start
             break
             ;;
 
-        'Iniciar Sakura Bot')  # Opcao 3
+        'Iniciar Sakura Bot')  # Opcao 5
 
             # Executando os comandos...
 
