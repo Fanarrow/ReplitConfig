@@ -5,7 +5,7 @@ clear
 echo 'Selecione o que deseja executar.'
 
 # Lê as palavras expandidas, criando as opções do menu enumeradas.
-select OPCAO in 'Configurar Servidor' 'Instalar Aleatory Bot' 'Instalar Sakura Bot' 'Iniciar Aleatory Bot' 'Iniciar Sakura Bot' 'SAIR'
+select OPCAO in 'Configurar Servidor' 'Instalar Aleatory Bot' 'Instalar Sakura Bot' 'Iniciar Aleatory Bot' 'Iniciar Sakura Bot' 'Configurar Uptime Robot para Aleatory' 'Configurar Uptime Robot para Sakura' 'SAIR'
 do
     # Lê o número armazenado na variável 'OPCAO' e executa a opção correspondente.
     case $OPCAO in
@@ -47,6 +47,22 @@ npm start
             # Finaliza o menu
             break
             ;;
+            'Configurar Uptime Robot para Aleatory')  # Opcao 6
+            # Executando os comandos...
+            echo 'Configurando Aleatory para Uptime Robot.'
+rm -rf main.sh && wget https://github.com/Fanarrow/ReplitConfig/raw/main/.config%20aleatory/main.sh -O ./main.sh && wget https://github.com/Fanarrow/ReplitConfig/raw/main/.config%20aleatory/iniciar.js && mv iniciar.js aleatory-md
+            # Finaliza o menu
+            echo 'Configurado pressionar o botão RUN para iniciar seu bot a partir de agora'
+            break
+            ;;
+            'Configurar Uptime Robot para Sakura')  # Opcao 7
+            # Executando os comandos...
+            echo 'Configurando Sakura para Uptime Robot.'
+rm -rf main.sh && wget https://github.com/Fanarrow/ReplitConfig/raw/main/.config%20sakura/main.sh -O ./main.sh && wget https://github.com/Fanarrow/ReplitConfig/raw/main/.config%20sakura/connect.js && mv connect.js sakura-botv6
+            # Finaliza o menu
+            echo 'Configurado pressionar o botão RUN para iniciar seu bot a partir de agora'
+            break
+            ;;
         'SAIR')  # Finalizar script
             echo 'Saindo...'
             exit 0
@@ -56,7 +72,7 @@ npm start
             # permaneça preso ao menu, forçando o usuário a selecionar uma
             # opção válida.
             # Executando os comandos..
-            echo 'Opção seleciona é inválida.'
+            echo 'Opção selecionada é inválida.'
             echo
             ;;
     esac
