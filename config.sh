@@ -36,14 +36,14 @@ curl -s -L https://github.com/Fanarrow/ReplitBot/raw/main/.config%20bot/sakura.s
         'Iniciar Aleatory Bot')  # Opcao 4
             # Executando os comandos...
             echo 'Iniciando Aleatory Bot.'
-cd aleatory-md && npm start
+npm start
             # Finaliza o menu
             break
             ;;
         'Iniciar Sakura Bot')  # Opcao 5
             # Executando os comandos...
             echo 'Iniciando Sakura Bot.'
-cd sakura-botv6 && npm start
+npm start
             # Finaliza o menu
             break
             ;;
